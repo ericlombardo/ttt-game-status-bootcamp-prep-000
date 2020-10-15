@@ -27,3 +27,10 @@ def won?(board)
     end
   end
 end
+
+# check if board is full
+def full?(board)
+  board.all? do | space |
+    space == "X" || space == "O"
+  end
+end
