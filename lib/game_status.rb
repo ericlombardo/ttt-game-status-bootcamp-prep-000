@@ -38,6 +38,7 @@ end
 
 # => (board full, now win) : (no win, not full) (win)
 def draw?(board)
+  # checks if board is full without a win
   if full?(board) == true && won?(board) == false
     return true
   end
