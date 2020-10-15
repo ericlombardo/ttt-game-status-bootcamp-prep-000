@@ -54,9 +54,11 @@ end
 
 # => tolken of winner | "X" or "O"
 def winner(board)
-  # assigns
+  # assigns value of #won? to winner_tolken
   winner_tolken = won?(board)
+  # if there was a winner it returns an array
   if winner_tolken != false
+    # return what the element in the winning position is | "X" or "O"
     return board[winner_tolken[0]]
   end
 end
