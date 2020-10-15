@@ -30,7 +30,15 @@ end
 
 # check if board is full
 def full?(board)
+  # check if all elements in board array are "X" or "O", => true if they are
   board.all? do | space |
     space == "X" || space == "O"
+  end
+end
+
+# => (board full, now win) : (no win, not full) (win)
+def draw?(board)
+  if full?(board) == true && won?(board) == false
+    return true
   end
 end
