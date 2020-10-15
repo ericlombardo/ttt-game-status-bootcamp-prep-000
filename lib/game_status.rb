@@ -9,3 +9,14 @@ WIN_COMBINATIONS = [
   [0, 4, 8],
   [2, 4, 6]
 ]
+
+# check if there is a win
+def won?(board)
+  WIN_COMBINATIONS.each do | combo |
+    position_1 = board(combo[0])
+    position_2 = board(combo[1])
+    position_3 = board(combo[2])
+
+    
+  end
+end
