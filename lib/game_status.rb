@@ -46,7 +46,15 @@ end
 
 # => won, draw, full : anything else
 def over?(board)
+  # returns true if #won? doesn't return array, it is a draw, or board is full
   if won?(board) != false || draw?(board) == true || full?(board) == true
     return true
+  end
+end
+
+# => tolken of winner | "X" or "O"
+def winner(board)
+  if won?(board) != false
+    return combo[0]
   end
 end
