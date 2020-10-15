@@ -13,9 +13,9 @@ WIN_COMBINATIONS = [
 # check if there is a win
 def won?(board)
   WIN_COMBINATIONS.any? do | combo |
-    position_1 = board(combo[0])
-    position_2 = board(combo[1])
-    position_3 = board(combo[2])
+    position_1 = board[combo[0]]
+    position_2 = board[combo[1]]
+    position_3 = board[combo[2]]
 
     if position_1 == "X" && position_2 == "X" && position_3 == "X"
       return combo
