@@ -8,5 +8,3 @@ WIN_COMBINATION = [
   [0, 4, 8],
   [2, 4, 6]
 ]
-
-puts WIN_COMBINATIONS.length
