@@ -12,7 +12,7 @@ WIN_COMBINATIONS = [
 
 # check if there is a win
 def won?(board)
-  WIN_COMBINATIONS.select do | combo |
+  WIN_COMBINATIONS.any? do | combo |
     position_1 = board(combo[0])
     position_2 = board(combo[1])
     position_3 = board(combo[2])
