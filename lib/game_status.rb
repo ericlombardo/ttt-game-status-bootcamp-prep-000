@@ -54,8 +54,8 @@ end
 
 # => tolken of winner | "X" or "O"
 def winner(board)
-  won?(board)
+  winner_tolken = won?(board)
   if won?(board) != false
-    return board[combo[0]]
+    return board[winner_tolken[0]]
   end
 end
