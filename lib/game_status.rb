@@ -14,13 +14,11 @@ WIN_COMBINATIONS = [
 def won?(board)
   # loop through WIN_COMBINATIONS to see if any fit criteria below
   WIN_COMBINATIONS.any? do | combo |
-    # assign array elements to postions
-    position_1 = board[combo[0]]
-    position_2 = board[combo[1]]
-    position_3 = board[combo[2]]
-    # check if the positions are all "X" or "O"
-    if position_1 == "X" && position_2 == "X" && position_3 == "X" || position_1 == "O" && position_2 == "O" && position_3 == "O"
-      # if they do return that array combo
+    # check if all elements in combo are "X" or "O"
+    test = combo.all? do | elem |
+      elem == "X"
+    end
+    if test == true
       return combo
     end
   end
